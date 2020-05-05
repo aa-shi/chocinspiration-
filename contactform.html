@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Chocinspiration Contact Form</title>
+</head>
+
+<body>
+	
+    <?php
+
+	 $to = "info@chocinspiration.co.uk";
+	 $subject = "Contact form of website";
+	
+	 $headers = "From: webmaster@example.com" . "\r\n" .
+	 "CC: aashi1@yahoo.com";
+	
+	 $txt="Dear Admin, New Contat us form has been filled on the website with follwoing details" .
+	 
+	 "Full Name " . $_POST['fullname']. "\n" . "Contact Number" . $_POST['contactnumber'].  "\n" . "Email" . $_POST['emailadd'] .  "\n" . "Subject " . $_POST['subject']. "Inquiry" . $_POST['inquiry'] . " Thank you";
+	 
+	 mail($to,$subject,$txt,$headers);
+	 
+	?> 
+
+
+</body>
+</html>
